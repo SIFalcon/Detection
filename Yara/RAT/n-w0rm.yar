@@ -1,4 +1,4 @@
-rule NW0rm { 
+rule MAL_NW0rm { 
 	meta:
 		description = "Detect the final RAT dropped by N-W0rm"
 		author = "SECUINFRA Falcon Team"
