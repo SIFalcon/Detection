@@ -14,8 +14,9 @@ rule MAL_NW0rm {
 		
 		$b1 = "Select * from AntivirusProduct" fullword wide
 		$b2 = "ExecutionPolicy Bypass -WindowStyle Hidden -NoExit -File" fullword wide
-		$b3 = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36" fullwo $b4 = "killer" fullword wide
-		$b4 = "nyanmoney02.duckdns.org" fullword wide
+		$b3 = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36" fullword wide
+		$b4 = "killer" fullword wide
+		$b5 = "nyanmoney02.duckdns.org" fullword wide
 
 	condition:
 		uint16(0) == 0x5a4d and 2 of ($a*) and 2 of ($b*)
