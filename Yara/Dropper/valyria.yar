@@ -1,4 +1,3 @@
-
 rule DROPPER_Valyria_Stage_1: JavaScript VBS Valyria{
 	meta:
 		author = "SECUINFRA Falcon Team"
