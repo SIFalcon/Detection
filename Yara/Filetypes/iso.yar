@@ -15,5 +15,5 @@ rule SUSP_VBS_in_ISO: VBS ISO {
 		$a3 = { 72 65 70 6C 61 63 65 } // replace 
 
 	condition:
-		filesize > 500KB and filesize < 800KB and $magic and 1 of ($a*)
+		filesize < 800KB and $magic and 1 of ($a*)
 }
