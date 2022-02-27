@@ -13,7 +13,7 @@ rule DROPPER_Vjw0rm_Stage_1: JavaScript Dropper Vjw0rm {
 		$a4 = "join(\"\")"
 
 	condition:
-		// uint16(0) == 'fu' (function) or 'va' (var)
-		(uint16(0) == 0x7566 or uint16(0) == 0x6176 or uint16(0) == 0x0a0d or uint16(0) == 0x660a) and filesize < 60KB and all of ($a*) 
-		// 0a66
+		(uint16(0) == 0x7566 or uint16(0) == 0x6176 or uint16(0) == 0x0a0d or uint16(0) == 0x660a) 
+		and filesize < 60KB 
+		and all of ($a*) 
 }

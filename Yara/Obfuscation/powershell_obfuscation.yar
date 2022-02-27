@@ -11,7 +11,9 @@ rule OBFUS_PowerShell_Execution {
 		$b1 = "SQBFAF"
 
 	condition:
-		1 of ($a*) and $b1
+		filesize < 300KB 
+		and $b1
+		and 1 of ($a*) 
 }
 
 rule OBFUS_PowerShell_Replace_Tilde {
@@ -25,7 +27,8 @@ rule OBFUS_PowerShell_Replace_Tilde {
 		$a = ".Replace(\"~\",\"0\")"
 
 	condition:
-		$a
+		filesize < 400KB
+		and $a
 }
 
 rule OBFUS_PowerShell_Common_Replace {
@@ -35,8 +38,9 @@ rule OBFUS_PowerShell_Common_Replace {
 		description = "Detects the common usage of replace for obfuscation"
 
 	strings:
-		$replace = ".replace(" nocase
+		$replace = "replace(" nocase
 
 	condition:
-		filesize < 100KB and #replace > 20
+		filesize < 100KB 
+		and #replace > 10
 }

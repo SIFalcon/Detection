@@ -14,5 +14,5 @@ rule DROPPER_WSHRAT_Stage_1 {
 		$b3 = "Array.prototype"
 
 	condition:
-		filesize < 1500KB and $a1 and #b3 > 3 and $b1 > 2 and $b2
+		filesize < 1500KB and $a1 and #b3 > 3 and #b1 > 2 and $b2
 }
